@@ -1,0 +1,22 @@
+import random
+import time
+high = int(input("Upper Limited : "))
+low = 1
+count = 1
+while True:
+    guess = random.randint(low,high)
+    print("Guessing........................................................")
+    time.sleep(1)
+    print(guess)
+    is_win = input("High : 'h' , low : 'l' ,correct : 'c'  = ")
+    if is_win == 'h':
+        high = guess - 1
+        count += 1
+    elif is_win == 'l':
+        low = guess + 1
+        count += 1
+    elif is_win == 'c':
+        print(f"Computer guessed the number : {guess} . In {count} try")
+        break
+    else:
+        print("You chhose the wrong option")

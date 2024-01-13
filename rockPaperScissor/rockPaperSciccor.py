@@ -9,11 +9,11 @@ def play():
     user = input("'r' for rock , 'p' for paper , 's' for sciccor  :\n ")
 
     if computer == user:
-        return 'Tie'
+        return 'Tie . Computer choose:'+computer
     
     if winner(computer,user):
-        return 'You lose!'
+        return 'You lose!. Computer choose:'+computer
     
-    return 'You Won!'
+    return 'You Won!. Computer choose:'+computer
 
 print(play())
